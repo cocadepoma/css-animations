@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(69, 69, 69);
+}
+
+.fig {
+	width: 500px;
+	height: 330px;
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	border-radius: 30px;
+	position: relative;
+	overflow: hidden;
+}
+
+.fig img {
+	width: 500px;
+	height: 330px;
+	border-radius: 30px;
+}
+
+.fig:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #006266;
+	opacity: 0.5;
+	transform: translateY(100%);
+	transition: all 0.25s;
+	border-radius: 30px;
+	transition-delay: .25s;
+}
+
+.fig:hover:before {
+	transform: translateY(0);
+	transition-delay: 0s;
+}
+
+.fig .caption {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transform: translateY(-30px);
+	transition: all 0.25s;
+}
+
+.fig:hover .caption {
+	opacity: 1;
+	transform: translateY(-10px);
+	transition-delay: 0.3s;
+}
+
+.fig h3,
+.fig h5 {
+	margin: 0;
+	letter-spacing: 1px;
+}
+
+.fig h3 {
+	text-transform: uppercase;
+	font-weight: 400;
+	margin-bottom: 5px;
+}
+
+.fig h5 {
+	background-color: #ae895d;
+	padding: 3px 5px;
+	font-weight: 600;
+}
