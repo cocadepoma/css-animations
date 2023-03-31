@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "stylelint": "^15.3.0",
+    "stylelint-config-clean-order": "^5.0.0",
     "stylelint-order": "^6.0.3"
   }
 }
