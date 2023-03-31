@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+body {
+	align-items: center;
+	background-color: rgb(60 61 61);
+	display: flex;
+	font-family: sans-serif;
+	font-family: Raleway, sans-serif;
+	height: 100vh;
+	justify-content: center;
+}
+
+ul {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+ul li {
+	list-style: none;
+	margin: 5px;
+	position: relative;
+}
+
+a {
+	display: block;
+	font-weight: 300;
+	height: 40px;
+	letter-spacing: 2px;
+	overflow: hidden;
+	padding: 5px 10px;
+	position: relative;
+	text-decoration: none;
+}
+
+ul li a span {
+	align-items: center;
+	color: white;
+	display: flex;
+	font-size: 20px;
+	height: 100%;
+	justify-content: center;
+	position: relative;
+	text-transform: capitalize;
+	transition: 0.5s;
+	transition-delay: 0.5s;
+	width: 100%;
+}
+
+a:hover span:nth-child(1){
+	transform: translateY(-100%);
+	transition-delay: 0s;
+}
+
+a:hover span:nth-child(2){
+	transform: translateY(-100%);
+	transition-delay: 0s;
+}
+
+a::before {
+	background-color: #16a085;
+	content: "";
+	height: 100%;
+	position: absolute;
+
+	/* Set right direction as default position so moves in this direction after hovering */
+	right: 0;
+	top: 0;
+	transition: all 0.5s;
+	transition-delay: 0.2s;
+	width: 0%;
+}
+ 
+a:hover::before {
+	left: 0;
+	transition-delay: 0.5s;
+
+	/* Set width to 100% to fill space and set left position to 0 so element moves in from the left side on hover */
+	width: 100%;
+}
