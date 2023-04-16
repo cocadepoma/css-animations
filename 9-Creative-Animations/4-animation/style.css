@@ -1,0 +1,45 @@
+/* <a href="https://www.freepik.com/free-vector/city-at-night-and-day-illustration_829621.htm">Designed by Freepik</a> */
+
+/* https://www.freepik.com/free-vector/city-at-night-and-day-illustration_829621.htm */
+
+body {
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+
+	background-color: #EA2027;
+}
+
+h1 {
+	font-size: 50px;
+	color: white;
+}
+
+span::before {
+	content: 'TRANSITIONS';
+
+	font-family: Arial, Helvetica, sans-serif;
+	color: #1B1462;
+	text-transform: uppercase;
+
+	animation: word-switch 5s infinite;
+}
+
+@keyframes word-switch {
+	0% {
+		content: 'transitions';
+	}
+
+	33% {
+		content: 'animations';
+	}
+
+	66% {
+		content: 'transforms';
+	}
+}

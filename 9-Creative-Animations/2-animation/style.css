@@ -1,18 +1,22 @@
 body {
-  align-items: center;
-  background-color: #26de81;
   display: flex;
-  height: 100vh;
+  align-items: center;
   justify-content: center;
+
+  height: 100vh;
+
   perspective: 200px;
+  background-color: #26de81;
 }
 
 .loading {
-  animation: loading 2s linear infinite;
+  width: 100px;
+  height: 100px;
+
   background-color: white;
   border-radius: 13px;
-  height: 100px;
-  width: 100px;
+
+  animation: loading 2s linear infinite;
 }
 
 @keyframes loading {
