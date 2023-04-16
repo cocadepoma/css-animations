@@ -1,0 +1,52 @@
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+
+	background-color:white;
+}
+
+.container {
+	position: relative;
+	width: 200px;
+	height: 200px;
+}
+
+.container .ring {
+	width: 100%;
+	height: 100%;
+
+	border-left: 4px solid #262626;
+	border-radius: 50%;
+
+	animation: rotate 0.8s linear infinite;
+}
+
+.container .text {
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 200px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

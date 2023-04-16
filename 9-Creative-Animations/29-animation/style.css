@@ -1,0 +1,90 @@
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+
+	background-color:#212121;
+}
+
+.line {
+	position: relative;
+	width: 300px;
+	border-bottom: 4px solid white;
+	animation: line 1s linear infinite alternate;
+}
+
+.hexagon {
+	position: absolute;
+	bottom: 14px;
+	left: 0;
+
+	width: 50px;
+	height: 30px;
+
+	background-color: white;
+
+	animation: hex 2s linear infinite;
+}
+
+.hexagon::before {
+	content: '';
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotate(60deg);
+
+	width: 100%;
+	height: 100%;
+
+	background-color: white;
+}
+
+.hexagon::after {
+	content: '';
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotate(-60deg);
+
+	width: 100%;
+	height: 100%;
+
+	background-color: white;
+}
+
+@keyframes hex {
+	0%{
+		left: 0;
+		transform: rotate(0deg);
+	}
+
+	50% {
+		left: calc(100% - 50px);
+		transform: rotate(720deg);
+	}
+
+	100% {
+		left: 0;
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes line {
+	0% {
+		transform: rotate(-30deg);
+	}
+
+	50% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(30deg);
+	}
+}

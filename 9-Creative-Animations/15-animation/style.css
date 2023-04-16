@@ -1,0 +1,61 @@
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 100vh;
+	margin: 0;
+	padding: 0;
+
+	background-color: #212121;
+}
+
+.pulse {
+	position: relative;
+
+	width: 100px;
+	height: 100px;
+
+	font-size: 48px;
+	line-height: 100px;
+	color: white;
+	text-align: center;
+
+	background-color: #58ea00;
+	border-radius: 50%;
+
+}
+
+.pulse::before, .pulse::after {
+	content: '';
+	
+	position: absolute;
+	inset: -20px;
+
+	opacity: 0;
+	border: 1px solid #58ea00;
+	border-radius: 50%;
+
+	animation: pulsing 1s infinite linear;
+}
+
+.pulse::after {
+	animation-delay: 0.5s;
+}
+
+@keyframes pulsing {
+	0% {
+		transform: scale(0.5);
+		opacity: 0;
+	}
+
+	50% {
+		transform: scale(1);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(1.2);
+		opacity: 0;
+	}
+}
